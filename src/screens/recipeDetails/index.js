@@ -10,7 +10,7 @@ const RecipeDetails = () => {
   const { params } = useRoute();
   const recipeId = params?.recipeId;
   const { getDetails, recipeDetails } = useRecipeDetails({ recipeId });
-  console.log('recipeDetails', recipeDetails);
+
   useEffect(() => {
     getDetails();
   }, [getDetails]);
