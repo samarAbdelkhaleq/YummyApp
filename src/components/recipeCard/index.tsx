@@ -1,8 +1,13 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { styles } from './style';
+import { Recipe } from '../../Types';
 
-const RecipeCard = ({ item, onPress }) => {
+interface RecipeCardProps {
+  item: Recipe;
+  onPress: () => void;
+}
+const RecipeCard = ({ item, onPress }: RecipeCardProps) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
       <View style={styles.rowContainer}>
